@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Group: Relevance of Primes in the Brauer–Manin Obstruction | Tianchen Zhao</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@400;500;600&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #f6f3ed;
+    --accent: #8b4513;
+    --accent-light: #c49a6c;
+    --muted: #6b6560;
+    --divider: #d4cec5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 60px 32px 100px;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  a:hover { border-bottom-color: var(--accent); }
+
+  .back {
+    display: inline-block;
+    font-size: 0.85rem;
+    margin-bottom: 32px;
+  }
+
+  header { margin-bottom: 40px; }
+
+  header h1 {
+    font-family: 'Crimson Pro', 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  header .subtitle {
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  section { margin-bottom: 40px; }
+
+  section h2 {
+    font-family: 'Crimson Pro', 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  section p {
+    font-size: 0.95rem;
+    color: #3a3835;
+    margin-bottom: 12px;
+  }
+
+  /* ── Sessions ── */
+  .sessions { list-style: none; }
+
+  .session {
+    display: grid;
+    grid-template-columns: 96px 1fr auto;
+    gap: 2px 16px;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--divider);
+  }
+
+  .session:first-child { border-top: 1px dashed var(--divider); }
+
+  .session-date {
+    font-size: 0.85rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .session-topic {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .session-speaker {
+    font-size: 0.88rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .session-notes {
+    font-size: 0.85rem;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--divider);
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 600px) {
+    .page { padding: 36px 20px 60px; }
+    header h1 { font-size: 1.7rem; }
+    .session { grid-template-columns: 1fr; }
+    .session-notes { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <a class="back" href="index.html">&larr; Tianchen Zhao</a>
+
+  <header>
+    <h1>The relevance of primes in the Brauer–Manin obstruction</h1>
+    <div class="subtitle">Study group at ICERM · Fall 2026 · Organized by Tianchen Zhao</div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      Which primes can contribute to the Brauer–Manin obstruction on a variety over a number field?
+      This study group goes through recent results on this question, with an emphasis on K3 surfaces.
+    </p>
+    <p>
+      Outline: <a href="notes/relevance-of-primes.pdf">The relevance of primes in Brauer–Manin obstruction</a> (PDF)
+    </p>
+  </section>
+
+  <section>
+    <h2>Schedule</h2>
+
+    <!--
+      Each session is one <li class="session"> block.
+
+      Session WITH notes: the third part is
+        <span class="session-notes"><a href="notes/FILE-NAME.pdf">Notes (PDF)</a></span>
+      after uploading FILE-NAME.pdf to the "notes" folder of this repository.
+
+      Session WITHOUT notes: the third part is
+        <span class="session-notes"></span>
+      (nothing is displayed).
+    -->
+    <ol class="sessions">
+      <li class="session">
+        <span class="session-date">TBA</span>
+        <div>
+          <div class="session-topic">Colliot-Thélène–Skorobogatov</div>
+          <div class="session-speaker">Speaker TBA</div>
+        </div>
+        <span class="session-notes"></span>
+      </li>
+      <li class="session">
+        <span class="session-date">TBA</span>
+        <div>
+          <div class="session-topic">Bright–Newton</div>
+          <div class="session-speaker">Speaker TBA</div>
+        </div>
+        <span class="session-notes"></span>
+      </li>
+      <li class="session">
+        <span class="session-date">TBA</span>
+        <div>
+          <div class="session-topic">Ieronymou</div>
+          <div class="session-speaker">Speaker TBA</div>
+        </div>
+        <span class="session-notes"></span>
+      </li>
+      <li class="session">
+        <span class="session-date">TBA</span>
+        <div>
+          <div class="session-topic">Pagano</div>
+          <div class="session-speaker">Speaker TBA</div>
+        </div>
+        <span class="session-notes"></span>
+      </li>
+      <li class="session">
+        <span class="session-date">TBA</span>
+        <div>
+          <div class="session-topic">Ambrosi–Newton–Pagano</div>
+          <div class="session-speaker">Speaker TBA</div>
+        </div>
+        <span class="session-notes"></span>
+      </li>
+      <li class="session">
+        <span class="session-date">TBA</span>
+        <div>
+          <div class="session-topic">Lazda–Skorobogatov: the function field case</div>
+          <div class="session-speaker">Speaker TBA</div>
+        </div>
+        <span class="session-notes"></span>
+      </li>
+    </ol>
+  </section>
+
+  <footer>
+    &copy; 2026 Tianchen Zhao
+  </footer>
+
+</div>
+</body>
+</html>
